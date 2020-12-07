@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node
+{
+  int data;
+  struct Node *next;
+};
+
+void linkedListTraversal(struct Node *ptr)
+{
+  int c=1;
+  while(ptr!=NULL)
+  {
+    printf("Element %d = %d\n",c,ptr->data);
+    ptr = ptr->next;
+    c++;
+  }
+}
+
+struct Node *insertAfterNode(struct Node *head,struct Node *prevNode,int data)
+{
+  struct Node *ptr = (struct Node*) malloc (sizeof(struct Node));
+  ptr->data = data;
+
+  ptr->next = prevNode->next;
+  prevNode->next = ptr;
+  return head;
+}
+
+int main()
+{
+  struct Node*head;
+  struct Node*second;
+  struct Node*third;
+  struct Node*fourth;
+  struct Node*fifth;
+
+  // Allocating memory in the HEAP
+  head = (struct Node*) malloc(sizeof(struct Node));
+  second = (struct Node*) malloc(sizeof(struct Node));
+  third = (struct Node*) malloc(sizeof(struct Node));
+  fourth = (struct Node*) malloc(sizeof(struct Node));
+  fifth = (struct Node*) malloc(sizeof(struct Node));
+
+  // Linking the head and the second node
+  head->data = 7;
+  head->next = second;
+
+  // Linking the second and the third node
+  second->data = 14;
+  second->next = third;
+
+  // Linking the third and the fourth node
+  third->data = 21;
+  third->next = fourth;
+
+  // Linking the fourth and the fifth node
+  fourth->data = 28;
+  fourth->next = fifth;
+
+  // Linking the last node to the NULL.
+  fifth->data = 35;
+  fifth->next = NULL;
+
+  // Calling the function in order to print the list
+  printf("Linked List before Insertion:\n");
+  linkedListTraversal(head);
+  head = insertAfterNode(head,second,100);
+  printf("\nLinked List after Inserting at given position:\n");
+  linkedListTraversal(head);
+  return 0;
+}
