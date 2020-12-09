@@ -1,0 +1,78 @@
+#include <stdio.h>
+
+int LinearSearch(int arr[],int size,int element)
+{
+  for(int i=0;i<size;i++)
+  {
+    if(arr[i]==element)
+      return i;
+  }
+    return -1;
+}
+
+int BinarySearch(int arr[],int size,int element)
+{
+  int low=0;
+  int high = size-1;
+  int mid;
+  while(low<=high)
+  {
+    mid=(low+high)/2;
+    if(arr[mid]==element)
+    {
+      return mid;
+    }
+    if(arr[mid]<element)
+    {
+      low = mid + 1;
+    }
+    else
+    {
+      high = mid - 1;
+    }
+  }
+  return -1;
+}
+
+int main()
+{
+  int arr[100],size,i,element,ch;
+  printf("\nChoice of Searching:\n1. Linear Search \n2. Binary Search \n");
+  scanf("%d",&ch);
+
+  if(ch==2)
+  {
+    printf("REMEMBER TO PUT THE ARRAY IN SORTED MANNER\n");
+  }
+  printf("Size:");
+  scanf("%d", &size);
+
+  printf("\nEnter elements\n");
+
+  for (i = 0; i < size; i++)
+    scanf("%d", &arr[i]);
+
+  printf("\nNumber to search:\n");
+  scanf("%d", &element);
+
+
+  switch (ch)
+  {
+    case 1: ;
+      int Index = LinearSearch(arr,size,element);
+      printf("Congratulations number %d was found at %d\n",element,Index);
+      printf("Sorted Array? Try Binary Search and reduce the time complexity from O(n) to O(log n)\n");
+      break;
+
+    case 2: ;
+      int searchIndex  = BinarySearch(arr,size,element);
+      printf("Number %d was found at %d\n",element,searchIndex);
+      printf("Congratulations! Searching done in O(log n) time\n");
+      break;
+
+    default:
+      printf("Wrong Choice!");
+  }
+
+  return 0;
+}
