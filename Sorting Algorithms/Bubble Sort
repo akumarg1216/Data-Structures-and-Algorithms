@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+void printArray(int *A, int n)
+{
+  for(int i=0;i<n;i++)
+    printf("%d\n",A[i]);
+}
+
+void bubbleSort(int *A, int n)
+{
+  for(int i=0;i < n-1;i++)
+  {
+    for(int j=0;j < n-1-i;j++)
+    {
+      if(A[j]>A[j+1])
+      {
+        int temp = A[j];
+        A[j] = A[j+1];
+        A[j+1] = temp;
+      }
+    }
+  }
+}
+
+int main()
+{
+  int A[100],size,i;
+  printf("Size:");
+  scanf("%d",&size);
+
+  printf("Element:\n");
+  for(i=0;i<size;i++)
+    scanf("%d",&A[i]);
+
+  printf("Before Sorting:\n");
+  printArray(A,size);
+  bubbleSort(A,size);
+  printf("After Sorting:\n");
+  printArray(A,size);
+}
