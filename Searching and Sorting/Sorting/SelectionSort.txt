@@ -1,0 +1,16 @@
+ We are given an array and we start from i=0 (the first element) of the array.
+ * We traverse through the array and find the minimum in array.
+ * If found we swap arr[0] with that value ensuring that the minimum value is now at index 0.
+ * 
+ * Then we again search the array for minimum value from arr[1] and swap the minimum from the rest of array with arr[1]
+ * 
+ * Thus at last we get the sorted array.
+ * 
+ * For n elements we require n-1 rounds of sorting.
+ * 
+ * Best, Average & Worst Time Complexity: O(n^2) // since each element has to do comparisons
+ * Space Complexity: O(1) // no extra arrays or any DS are required. 
+
+ * Use Cases:
+    1. For short arrays
+    2. Where memory is a constraint.

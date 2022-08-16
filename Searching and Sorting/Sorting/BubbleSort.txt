@@ -1,0 +1,25 @@
+Bubble Sort: 
+
+1. is the sorting technique
+
+2. for n elements to be sorted there will be n-1 rounds of iteration
+
+3. After each iteration the largest element will be in its correct position.
+
+4. Similarly for n-1 rounds all the elements will be in their correct position & one element left will be in its correct position by default.
+
+5. i will start from 1 and go till <n.
+
+6. After each iteration since the last element gets sorted so the iteration goes only till n-i element since the last ith elements are already sorted.
+
+7. Time Complexity: O(n^2)
+
+8. Best Time Complexity: O(n) // if the array is already sorted.
+
+9. Worst Time Complexity: O(n^2) // if the array is reverse sorted.
+
+10. Space Complexity: O(1) // no extra space required.
+
+11. Bubble Sort Algorithm is: Stable Algorithm.
+
+12. Learn about In-place Sort.

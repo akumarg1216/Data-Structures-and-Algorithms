@@ -1,0 +1,15 @@
+* Note: Insertion Sort uses shifting & not swapping
+
+* Rounds = Number of element - 1
+
+* Time Complexity: O(n^2)
+
+* Best Time Complexity: O(n)
+
+* Space Complexity: O(1)
+
+* In insertion sort we take an element and consider that to be sorted.
+
+* The next element if smaller than that single element is placed to the left or to the right if it is greater.
+
+* The process continues and the starting i elements get sorted in each round.

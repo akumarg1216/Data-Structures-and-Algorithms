@@ -1,0 +1,21 @@
+* In merge sort we apply the divide & conquer policy.
+
+* The mid is found using (start + end)/2.
+
+* The array is broken into 2 parts. Again in both parts, the array is divided from mid.
+
+* This process continues recursively till only a single element is left.
+
+* After that the parts are joined together but in a sorted manner.
+
+* Joining two smaller sorted arrays to form the original size sorted array.
+
+* This method uses recursion.
+
+* The merge sort is the fastest sorting technique among the Bubble, Selection & the Insertion sort technique.
+
+* Worst Time Complexity:
+
+* Best Time Complexity:
+
+* Space Complexity: O(n)

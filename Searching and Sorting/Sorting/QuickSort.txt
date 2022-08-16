@@ -1,0 +1,21 @@
+* Quick Sort algorithm is a sorting technique in which the element is taken as pivot and firstly placed in it's right position.
+
+* We then check the left part of the pivot; which should be less than the pivot element.
+
+* Similarly, the right part of the pivot should be elements greater than pivot.
+
+* QuickSort uses partitioning + recursion to sort the problem statement.
+
+* Best Time Complexity: O(n log n)
+
+* Average Time Complexity: O(n log n)
+
+* Worst Time Complexity: O(n^2)
+
+* Space Complexity: O(n)
+
+* Optimized Space Complexity: O(n log n)
+
+* Stable: The default implementation is not stable. However any sorting algorithm can be made stable by considering indexes as comparison parameter. 
+
+* In-place: Yes (because it uses extra space only for storing recursive function calls but not for manipulating the input)
